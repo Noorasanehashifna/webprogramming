@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Quiz</title>
+</head>
+<body>
+
+<h1>Online Quiz</h1>
+
+<h2>1. What is HTML?</h2>
+<input type="radio" name="q1"> HYPER TEXT MARKUP<br><br>
+<input type="radio" name="q1"> HYPER TEXT LANGUAGE<br><br>
+<input type="radio" name="q1" id="c1"> HYPER TEXT MARKUP LANGUAGE<br><br>
+<input type="radio" name="q1"> HYPER TEXT LANGUAGE<br><br>
+
+<h2>2. What is CSS?</h2>
+<input type="radio" name="q2" id="c2"> CASCADING STYLE SHEET<br><br>
+<input type="radio" name="q2"> STYLE SHEET<br><br>
+<input type="radio" name="q2"> CASCADING SHEET<br><br>
+<input type="radio" name="q2"> CASCADING SHEET STYLE<br><br>
+
+<h2>3. What is JS?</h2>
+<input type="radio" name="q3"> JAVA S<br><br>
+<input type="radio" name="q3" id="c3"> JAVA SCRIPT<br><br>
+<input type="radio" name="q3"> JAVA SHEET<br><br>
+<input type="radio" name="q3"> JAVA SCRIPT LANGUAGE<br><br>
+
+<input type="submit" value="Submit" onclick="check()">
+
+<h2 id="result">Score:</h2>
+
+<script>
+function check() {
+  let result = 0;
+
+  if (document.getElementById("c1").checked) result++;
+  if (document.getElementById("c2").checked) result++;
+  if (document.getElementById("c3").checked) result++;
+
+  document.getElementById("result").innerText = "Your Score: " + result + "/3";
+}
+</script>
+
+</body>
+</html>
+
